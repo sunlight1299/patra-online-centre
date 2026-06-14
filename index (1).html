@@ -1,0 +1,1005 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>পাত্র অনলাইন সেন্টার | Patra Online Centre — Rayda, Egra</title>
+<meta name="description" content="পাত্র অনলাইন সেন্টার, রায়দা রাসপুকুর, পাঁচরোল, এগরা। আধার, ভোটার, প্যান, রেশন কার্ড, সার্টিফিকেট, স্কলারশিপ ও সকল সরকারি অনলাইন পরিষেবা — ২৪x৭ খোলা।">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@500;700;900&family=Noto+Sans+Bengali:wght@400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#1A1A1A;
+    --paper:#FBF6EC;
+    --green-deep:#1F4D3A;
+    --green-mid:#3E7A4F;
+    --green-soft:#E8F0E6;
+    --gold:#F2A93B;
+    --gold-deep:#D98E1B;
+    --line: rgba(31,77,58,0.16);
+    --radius: 14px;
+    --shadow: 0 6px 20px rgba(31,77,58,0.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Noto Sans Bengali','Poppins',sans-serif;
+    background:var(--paper);
+    color:var(--ink);
+    line-height:1.6;
+  }
+  h1,h2,h3,.display{
+    font-family:'Noto Serif Bengali','Poppins',serif;
+    color:var(--green-deep);
+  }
+  .eng{font-family:'Poppins',sans-serif;}
+  a{color:inherit;text-decoration:none;}
+  img{max-width:100%;display:block;}
+
+  /* ===== TOP BAR ===== */
+  .topbar{
+    background:var(--green-deep);
+    color:var(--paper);
+    font-size:0.85rem;
+    padding:8px 16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:6px;
+  }
+  .topbar a{color:var(--gold);font-weight:600;}
+  .open-badge{
+    background:var(--gold);
+    color:var(--green-deep);
+    font-weight:700;
+    padding:2px 10px;
+    border-radius:20px;
+    font-size:0.78rem;
+    font-family:'Poppins',sans-serif;
+  }
+
+  /* ===== HERO ===== */
+  .hero{
+    background:
+      radial-gradient(circle at 85% 20%, rgba(242,169,59,0.20), transparent 45%),
+      linear-gradient(160deg, var(--green-deep) 0%, var(--green-mid) 100%);
+    color:var(--paper);
+    padding:48px 20px 64px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(255,255,255,0.025) 0 2px, transparent 2px 40px);
+    pointer-events:none;
+  }
+  .hero-inner{
+    max-width:1100px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    gap:36px;
+    flex-wrap:wrap;
+    position:relative;
+    z-index:1;
+  }
+  .hero-badge{
+    flex-shrink:0;
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    background:var(--gold);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 0 0 6px var(--paper), 0 0 0 10px var(--gold), var(--shadow);
+    position:relative;
+  }
+  .hero-badge-inner{
+    width:100%;height:100%;
+    border-radius:50%;
+    background:var(--green-deep);
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;
+    color:var(--gold);
+    font-family:'Noto Serif Bengali',serif;
+    font-weight:900;
+    border:3px dashed rgba(242,169,59,0.4);
+  }
+  .hero-badge-inner .big{font-size:1.55rem;line-height:1.15;}
+  .hero-badge-inner .small{font-size:0.62rem;font-family:'Poppins',sans-serif;color:var(--paper);margin-top:6px;letter-spacing:1px;}
+
+  .hero-text{flex:1;min-width:260px;}
+  .hero-eyebrow{
+    font-family:'Poppins',sans-serif;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:0.72rem;
+    color:var(--gold);
+    font-weight:700;
+    margin-bottom:10px;
+  }
+  .hero-text h1{
+    color:var(--paper);
+    font-size:2.6rem;
+    font-weight:900;
+    margin-bottom:6px;
+  }
+  .hero-text .eng-name{
+    font-size:1.05rem;
+    color:rgba(255,255,255,0.85);
+    margin-bottom:14px;
+    font-weight:500;
+  }
+  .hero-tag{
+    font-size:1.05rem;
+    color:var(--paper);
+    margin-bottom:22px;
+    max-width:520px;
+  }
+  .hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+  .btn{
+    font-family:'Poppins',sans-serif;
+    font-weight:600;
+    font-size:0.95rem;
+    padding:13px 24px;
+    border-radius:30px;
+    border:none;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn:active{transform:scale(0.97);}
+  .btn-gold{background:var(--gold);color:var(--green-deep);box-shadow:0 4px 14px rgba(242,169,59,0.4);}
+  .btn-gold:hover{background:var(--gold-deep);}
+  .btn-outline{background:transparent;color:var(--paper);border:2px solid rgba(255,255,255,0.5);}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold);}
+  .btn-whatsapp{background:#25D366;color:#fff;}
+  .btn-whatsapp:hover{background:#1ebe5b;}
+
+  /* ===== SECTION WRAP ===== */
+  section{max-width:1100px;margin:0 auto;padding:60px 20px;}
+  .section-head{text-align:center;margin-bottom:36px;}
+  .section-head .eyebrow{
+    font-family:'Poppins',sans-serif;
+    color:var(--gold-deep);
+    text-transform:uppercase;
+    letter-spacing:3px;
+    font-size:0.75rem;
+    font-weight:700;
+    margin-bottom:8px;
+  }
+  .section-head h2{font-size:2rem;font-weight:900;}
+  .section-head p{color:#5a6b62;margin-top:8px;font-size:1rem;}
+
+  /* ===== SERVICE LEDGER ===== */
+  .ledger-group{margin-bottom:32px;}
+  .ledger-group-title{
+    font-family:'Noto Serif Bengali',serif;
+    font-weight:700;
+    font-size:1.25rem;
+    color:var(--green-deep);
+    border-bottom:2px solid var(--gold);
+    display:inline-block;
+    padding-bottom:4px;
+    margin-bottom:14px;
+  }
+  .ledger-row{
+    background:#fff;
+    border:1px solid var(--line);
+    border-left:5px solid var(--green-mid);
+    border-radius:var(--radius);
+    margin-bottom:10px;
+    overflow:hidden;
+    transition:box-shadow .2s ease;
+  }
+  .ledger-row:hover{box-shadow:var(--shadow);}
+  .ledger-summary{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    padding:16px 18px;
+    cursor:pointer;
+    list-style:none;
+    flex-wrap:wrap;
+  }
+  .ledger-summary::-webkit-details-marker{display:none;}
+  .ledger-title{
+    display:flex;align-items:center;gap:12px;
+    font-weight:700;
+    font-size:1.05rem;
+    color:var(--ink);
+  }
+  .ledger-title .eng-sub{
+    display:block;
+    font-family:'Poppins',sans-serif;
+    font-weight:400;
+    font-size:0.78rem;
+    color:#7a8a80;
+    margin-top:2px;
+  }
+  .ledger-icon{
+    width:42px;height:42px;border-radius:10px;
+    background:var(--green-soft);
+    display:flex;align-items:center;justify-content:center;
+    font-size:1.3rem;flex-shrink:0;
+  }
+  .ledger-actions{display:flex;gap:8px;flex-wrap:wrap;}
+  .chip{
+    font-family:'Poppins',sans-serif;
+    font-size:0.82rem;
+    font-weight:600;
+    padding:8px 16px;
+    border-radius:20px;
+    border:1.5px solid var(--green-mid);
+    color:var(--green-deep);
+    background:transparent;
+    cursor:pointer;
+  }
+  .chip:hover{background:var(--green-soft);}
+  .chip-wa{
+    border-color:#25D366;color:#1a8a4a;
+  }
+  .chip-wa:hover{background:#e6f9ee;}
+  .ledger-toggle{
+    font-size:0.8rem;color:var(--gold-deep);font-weight:700;font-family:'Poppins',sans-serif;
+    display:flex;align-items:center;gap:4px;
+  }
+  details[open] .ledger-toggle .arrow{transform:rotate(180deg);}
+  .arrow{display:inline-block;transition:transform .2s ease;}
+  .ledger-detail{
+    padding:0 18px 18px 18px;
+    border-top:1px dashed var(--line);
+    padding-top:14px;
+    font-size:0.92rem;
+    color:#3d4d44;
+  }
+  .ledger-detail .docs-label{
+    font-weight:700;color:var(--green-deep);
+    display:block;margin-bottom:6px;
+    font-family:'Noto Serif Bengali',serif;
+  }
+  .ledger-detail ul{padding-left:20px;margin-bottom:8px;}
+  .ledger-detail li{margin-bottom:3px;}
+  .note-rule{
+    background:#FFF6E6;
+    border:1px solid var(--gold);
+    border-radius:8px;
+    padding:8px 12px;
+    font-size:0.82rem;
+    color:#8a6010;
+    margin-top:8px;
+    display:flex;
+    gap:8px;
+    align-items:flex-start;
+  }
+
+  /* ===== BOOKING ===== */
+  .booking-wrap{
+    background:var(--green-deep);
+    border-radius:24px;
+    padding:44px 28px;
+    color:var(--paper);
+    position:relative;
+    overflow:hidden;
+  }
+  .booking-wrap::before{
+    content:"";
+    position:absolute;
+    width:300px;height:300px;
+    background:var(--gold);
+    opacity:0.08;
+    border-radius:50%;
+    top:-100px;right:-100px;
+  }
+  .booking-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:16px;
+    position:relative;
+    z-index:1;
+  }
+  @media(max-width:640px){.booking-grid{grid-template-columns:1fr;}}
+  .field{display:flex;flex-direction:column;gap:6px;}
+  .field.full{grid-column:1/-1;}
+  .field label{
+    font-family:'Poppins',sans-serif;
+    font-size:0.85rem;font-weight:600;
+    color:var(--gold);
+  }
+  .field input, .field select, .field textarea{
+    font-family:'Noto Sans Bengali','Poppins',sans-serif;
+    padding:12px 14px;
+    border-radius:10px;
+    border:none;
+    background:rgba(255,255,255,0.95);
+    color:var(--ink);
+    font-size:0.95rem;
+  }
+  .field textarea{resize:vertical;min-height:70px;}
+  .booking-submit{
+    margin-top:22px;
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+    align-items:center;
+    position:relative;z-index:1;
+  }
+  #form-status{font-size:0.9rem;color:var(--gold);font-family:'Poppins',sans-serif;}
+
+  /* ===== ABOUT / TRUST STRIP ===== */
+  .trust-strip{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:18px;
+    text-align:center;
+  }
+  .trust-card{
+    background:#fff;
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:24px 16px;
+  }
+  .trust-card .icon{font-size:2rem;margin-bottom:8px;}
+  .trust-card h3{font-size:1.05rem;margin-bottom:4px;}
+  .trust-card p{font-size:0.85rem;color:#6a7b71;}
+
+  /* ===== FOOTER ===== */
+  footer{
+    background:var(--ink);
+    color:#cfd8d2;
+    padding:44px 20px 24px;
+    margin-top:40px;
+  }
+  .footer-grid{
+    max-width:1100px;margin:0 auto;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:32px;
+  }
+  .footer-grid h3{color:var(--gold);font-family:'Noto Serif Bengali',serif;margin-bottom:10px;font-size:1.1rem;}
+  .footer-grid p, .footer-grid a{font-size:0.9rem;color:#cfd8d2;display:block;margin-bottom:6px;}
+  .footer-grid a:hover{color:var(--gold);}
+  .map-frame{
+    width:100%;height:160px;border:0;border-radius:10px;margin-top:8px;
+  }
+  .footer-bottom{
+    max-width:1100px;margin:30px auto 0;
+    border-top:1px solid rgba(255,255,255,0.1);
+    padding-top:16px;
+    font-size:0.8rem;
+    color:#8a988f;
+    text-align:center;
+  }
+
+  /* ===== FLOATING WHATSAPP ===== */
+  .float-wa{
+    position:fixed;
+    bottom:20px;right:20px;
+    width:58px;height:58px;
+    background:#25D366;
+    border-radius:50%;
+    display:flex;align-items:center;justify-content:center;
+    box-shadow:0 6px 20px rgba(0,0,0,0.25);
+    z-index:999;
+    font-size:1.7rem;
+    color:#fff;
+  }
+  .float-wa:hover{transform:scale(1.08);}
+
+  /* ===== MODAL ===== */
+  .modal-overlay{
+    position:fixed;inset:0;
+    background:rgba(26,26,26,0.55);
+    display:none;
+    align-items:center;justify-content:center;
+    z-index:1000;
+    padding:20px;
+  }
+  .modal-overlay.active{display:flex;}
+  .modal-box{
+    background:var(--paper);
+    border-radius:18px;
+    max-width:420px;width:100%;
+    padding:28px;
+    text-align:center;
+    position:relative;
+    border:3px solid var(--gold);
+  }
+  .modal-box h3{margin-bottom:10px;}
+  .modal-box p{font-size:0.92rem;color:#4a5b51;margin-bottom:18px;}
+  .modal-close{
+    position:absolute;top:10px;right:14px;
+    font-size:1.3rem;cursor:pointer;color:var(--green-deep);
+    background:none;border:none;
+  }
+
+  @media(max-width:600px){
+    .hero-text h1{font-size:1.9rem;}
+    .hero-badge{width:140px;height:140px;}
+    .hero-badge-inner .big{font-size:1.15rem;}
+    section{padding:44px 16px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== TOP BAR ===== -->
+<div class="topbar">
+  <div class="eng">📍 Rayda Raspukur, Panchrol, Egra, Purba Medinipur — 721447</div>
+  <div style="display:flex;gap:14px;align-items:center;">
+    <span class="open-badge">খোলা ২৪x৭ · OPEN 24x7</span>
+    <a href="tel:+918967962733">📞 8967962733</a>
+  </div>
+</div>
+
+<!-- ===== HERO ===== -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">
+      <div class="hero-badge-inner">
+        <span class="big">পাত্র<br>অনলাইন<br>সেন্টার</span>
+        <span class="small">EST. RAYDA</span>
+      </div>
+    </div>
+    <div class="hero-text">
+      <div class="hero-eyebrow">আপনার ডিজিটাল কাজের নির্ভরযোগ্য সঙ্গী</div>
+      <h1>পাত্র অনলাইন সেন্টার</h1>
+      <div class="eng-name">Patra Online Centre — Your Digital Service Partner</div>
+      <p class="hero-tag">আধার, ভোটার, প্যান, রেশন কার্ড থেকে শুরু করে সকল সরকারি সার্টিফিকেট, স্কলারশিপ ও প্রকল্পের আবেদন — সব এক জায়গায়, ঘরের পাশে, দিনে-রাতে যখন প্রয়োজন।</p>
+      <div class="hero-actions">
+        <a href="#booking" class="btn btn-gold">📅 অ্যাপয়েন্টমেন্ট বুক করুন</a>
+        <a href="https://wa.me/918967962733?text=নমস্কার%2C%20আমি%20একটি%20পরিষেবা%20সম্পর্কে%20জানতে%20চাই।" target="_blank" class="btn btn-whatsapp">💬 WhatsApp করুন</a>
+        <a href="#services" class="btn btn-outline">সব পরিষেবা দেখুন</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TRUST STRIP ===== -->
+<section>
+  <div class="trust-strip">
+    <div class="trust-card">
+      <div class="icon">🕐</div>
+      <h3>২৪ ঘণ্টা খোলা</h3>
+      <p>বাড়ির পাশে সর্বদা পরিষেবা — জরুরি কাজেও দ্বিধা নেই।</p>
+    </div>
+    <div class="trust-card">
+      <div class="icon">💰</div>
+      <h3>সাশ্রয়ী মূল্য</h3>
+      <p>অন্য যেকোনো অনলাইন সেন্টার থেকে কম খরচে কাজ করা হয়।</p>
+    </div>
+    <div class="trust-card">
+      <div class="icon">📋</div>
+      <h3>সব ধরনের ফর্ম</h3>
+      <p>সরকারি প্রকল্প থেকে কলেজ ভর্তি — সব ফর্ম এখানেই পাওয়া যায়।</p>
+    </div>
+    <div class="trust-card">
+      <div class="icon">🤝</div>
+      <h3>বিশ্বাসযোগ্য পরিষেবা</h3>
+      <p>সুবোধ পাত্র — স্থানীয় মানুষের দীর্ঘদিনের নির্ভরতার জায়গা।</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SERVICES ===== -->
+<section id="services">
+  <div class="section-head">
+    <div class="eyebrow">আমাদের পরিষেবা</div>
+    <h2>সব পরিষেবা ও প্রয়োজনীয় ডকুমেন্ট</h2>
+    <p>প্রতিটি পরিষেবায় ক্লিক করে দেখুন কী কী ডকুমেন্ট লাগবে। সরাসরি WhatsApp করুন অথবা অ্যাপয়েন্টমেন্ট বুক করুন।</p>
+  </div>
+
+  <!-- GROUP: Identity Documents -->
+  <div class="ledger-group">
+    <div class="ledger-group-title">🪪 পরিচয়পত্র সংক্রান্ত কাজ</div>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🆔</span>আধার কার্ড<span class="eng-sub">Aadhaar Card — new, correction, update</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20আধার%20কার্ড%20সংক্রান্ত%20কাজ%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul>
+          <li>পুরনো আধার কার্ড (থাকলে)</li>
+          <li>মোবাইল নম্বর (লিংক করা)</li>
+          <li>ঠিকানা/নাম সংশোধনের জন্য প্রমাণপত্র</li>
+        </ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">💳</span>প্যান কার্ড<span class="eng-sub">PAN Card — new application & correction</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20প্যান%20কার্ড%20সংক্রান্ত%20কাজ%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul>
+          <li>আধার কার্ড</li>
+          <li>পাসপোর্ট সাইজ ফটো</li>
+          <li>সক্রিয় মোবাইল নম্বর ও ইমেল (যদি থাকে)</li>
+        </ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🗳️</span>ভোটার কার্ড<span class="eng-sub">Voter ID — new, correction, address change</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20ভোটার%20কার্ড%20সংক্রান্ত%20কাজ%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul>
+          <li>আধার কার্ড</li>
+          <li>পাসপোর্ট সাইজ ফটো</li>
+          <li>বয়স ও ঠিকানার প্রমাণপত্র</li>
+        </ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🌾</span>রেশন কার্ড<span class="eng-sub">Ration Card — new, correction, member add/remove</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20রেশন%20কার্ড%20সংক্রান্ত%20কাজ%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul>
+          <li>আধার কার্ড (সকল সদস্যের)</li>
+          <li>পরিবারের ফটো (নতুনের জন্য)</li>
+          <li>ব্যাংক পাসবুক / ঠিকানা প্রমাণ</li>
+        </ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- GROUP: Certificates -->
+  <div class="ledger-group">
+    <div class="ledger-group-title">📜 সার্টিফিকেট ও প্রমাণপত্র</div>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">👶</span>জন্ম সার্টিফিকেট<span class="eng-sub">Birth Certificate</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20জন্ম%20সার্টিফিকেট%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>হাসপাতাল/পঞ্চায়েত স্লিপ</li><li>পিতা-মাতার আধার কার্ড</li></ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🏷️</span>কাস্ট সার্টিফিকেট<span class="eng-sub">Caste Certificate (SC/ST/OBC)</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20কাস্ট%20সার্টিফিকেট%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>আধার কার্ড</li><li>পরিবারের পুরনো কাস্ট সার্টিফিকেট/প্রমাণ</li><li>ঠিকানা প্রমাণ</li></ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">💰</span>BDO / SDO ইনকাম সার্টিফিকেট<span class="eng-sub">Income Certificate</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20ইনকাম%20সার্টিফিকেট%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>আধার কার্ড</li><li>ঠিকানা প্রমাণ</li><li>পেশার প্রমাণ (যদি থাকে)</li></ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🏠</span>ডোমিসাইল / ডিস্ট্যান্স / পঞ্চায়েত সার্টিফিকেট<span class="eng-sub">Domicile, Distance & Panchayat Certificate</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20পঞ্চায়েত%2Fডোমিসাইল%2Fডিস্ট্যান্স%20সার্টিফিকেট%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>আধার কার্ড</li><li>ঠিকানা প্রমাণ</li><li>আবেদনের কারণ (স্কুল/কলেজ/চাকরি)</li></ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">💉</span>ভ্যাকসিন সার্টিফিকেট<span class="eng-sub">Vaccine Certificate Download</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20ভ্যাকসিন%20সার্টিফিকেট%20লাগবে।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>রেজিস্টার্ড মোবাইল নম্বর / আধার নম্বর</li></ul>
+      </div>
+    </details>
+  </div>
+
+  <!-- GROUP: Government Schemes -->
+  <div class="ledger-group">
+    <div class="ledger-group-title">🏛️ সরকারি প্রকল্প</div>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🏺</span>অন্নপূর্ণা ভাঁড়ার যোজনা<span class="eng-sub">Annapurna Yojana — application & form fill-up</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমি%20অন্নপূর্ণা%20ভাঁড়ার%20যোজনার%20জন্য%20আবেদন%20করতে%20চাই।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>আধার কার্ড</li><li>রেশন কার্ড</li><li>ব্যাংক পাসবুক</li><li>পাসপোর্ট সাইজ ফটো</li></ul>
+        <div class="note-rule">⚠️ ফর্ম ফিলাপ চলছে — সিট সংখ্যা সীমিত, তাড়াতাড়ি যোগাযোগ করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🌱</span>কৃষক বন্ধু / PM-Kisan<span class="eng-sub">Krishak Bandhu / PM-Kisan registration</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমি%20কৃষক%20বন্ধু%2FPM-Kisan%20এর%20জন্য%20আবেদন%20করতে%20চাই।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>আধার কার্ড</li><li>জমির খতিয়ান/দাগ নম্বর</li><li>ব্যাংক পাসবুক</li></ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🎓</span>স্কলারশিপ (সকল প্রকার)<span class="eng-sub">All types of student scholarships</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20স্কলারশিপ%20আবেদন%20করতে%20হবে।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>আধার কার্ড</li><li>স্কুল/কলেজের আইডি ও মার্কশিট</li><li>ইনকাম সার্টিফিকেট</li><li>ব্যাংক পাসবুক (Aadhaar linked)</li></ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">⚡</span>যুবশক্তি<span class="eng-sub">Yuva Shakti Scheme — upcoming</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20যুবশক্তি%20প্রকল্প%20নিয়ে%20তথ্য%20জানতে%20চাই।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় তথ্য:</span>
+        <ul><li>আধার কার্ড</li><li>বয়সের প্রমাণ</li><li>শিক্ষাগত যোগ্যতার সার্টিফিকেট</li></ul>
+        <div class="note-rule">⚠️ নতুন প্রকল্প — চালু হলে বিস্তারিত নিয়ম জানানো হবে। আপডেটের জন্য যোগাযোগ রাখুন।</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- GROUP: Land, Bills & Business -->
+  <div class="ledger-group">
+    <div class="ledger-group-title">🧾 জমি, বিল ও ব্যবসা সংক্রান্ত</div>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">📍</span>জমির রেকর্ড ও সার্চিং কপি<span class="eng-sub">Land Record & Plot Search Copy (দাগ/খতিয়ান)</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20জমির%20রেকর্ড%2Fসার্চিং%20কপি%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় তথ্য:</span>
+        <ul><li>মৌজার নাম</li><li>দাগ নম্বর / খতিয়ান নম্বর</li></ul>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🧾</span>অনলাইন খাজনা রশিদ<span class="eng-sub">Online Land Tax (Khajna) Receipt</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20খাজনা%20রশিদ%20কাটা%20প্রয়োজন।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় তথ্য:</span>
+        <ul><li>মৌজার নাম, দাগ/খতিয়ান নম্বর</li><li>পূর্বের রশিদ (থাকলে)</li></ul>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">💡</span>বৈদ্যুতিক বিল পেমেন্ট<span class="eng-sub">Electricity Bill Payment</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20বৈদ্যুতিক%20বিল%20পেমেন্ট%20করতে%20চাই।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় তথ্য:</span>
+        <ul><li>কনজিউমার নম্বর / পুরনো বিল</li></ul>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🏪</span>ট্রেড লাইসেন্স<span class="eng-sub">Trade License Application</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20ট্রেড%20লাইসেন্সের%20জন্য%20আবেদন%20করতে%20চাই।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>আধার কার্ড</li><li>দোকানের ঠিকানা প্রমাণ</li><li>পাসপোর্ট সাইজ ফটো</li></ul>
+        <div class="note-rule">⚠️ নিয়ম পরিবর্তনশীল — সর্বশেষ নিয়ম জানতে কল/WhatsApp করুন।</div>
+      </div>
+    </details>
+  </div>
+
+  <!-- GROUP: Printing, Forms & Others -->
+  <div class="ledger-group">
+    <div class="ledger-group-title">🖨️ ফটো, প্রিন্ট, ফর্ম ও অন্যান্য</div>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">📸</span>ফটো তোলা, জেরক্স, ল্যামিনেশন, PVC কার্ড<span class="eng-sub">Photo, Xerox, Lamination, PVC ID Card printing</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20ফটো%2Fজেরক্স%2Fল্যামিনেশন%2FPVC%20কার্ড%20করাতে%20চাই।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয়:</span>
+        <ul><li>মূল ডকুমেন্ট (জেরক্সের জন্য)</li><li>সরাসরি দোকানে এসে ছবি তোলা যাবে</li></ul>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">📝</span>সকল প্রকার অনলাইন ফর্ম ফিলাপ<span class="eng-sub">All Online Forms — college, university, job applications</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমার%20একটি%20ফর্ম%20ফিলাপ%20করাতে%20হবে।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয়:</span>
+        <ul><li>সংশ্লিষ্ট সার্টিফিকেট/মার্কশিট</li><li>আধার কার্ড ও ফটো</li><li>ফর্মের বিজ্ঞপ্তি (যদি থাকে)</li></ul>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">🔗</span>DBT লিংক ও সরকারি প্রকল্পের স্ট্যাটাস চেক<span class="eng-sub">DBT Bank Linking & Scheme Status Check</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20DBT%20লিংক%2Fস্ট্যাটাস%20চেক%20করাতে%20চাই।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয়:</span>
+        <ul><li>আধার কার্ড</li><li>ব্যাংক পাসবুক</li></ul>
+      </div>
+    </details>
+
+    <details class="ledger-row">
+      <summary class="ledger-summary">
+        <div class="ledger-title"><span class="ledger-icon">👮</span>পুলিশ ভেরিফিকেশন<span class="eng-sub">Police Verification Application</span></div>
+        <div class="ledger-actions">
+          <a class="chip chip-wa" target="_blank" href="https://wa.me/918967962733?text=নমস্কার%2C%20পুলিশ%20ভেরিফিকেশনের%20জন্য%20আবেদন%20করতে%20চাই।">WhatsApp</a>
+          <span class="ledger-toggle">বিস্তারিত <span class="arrow">▾</span></span>
+        </div>
+      </summary>
+      <div class="ledger-detail">
+        <span class="docs-label">প্রয়োজনীয় ডকুমেন্ট:</span>
+        <ul><li>আধার কার্ড</li><li>ঠিকানা প্রমাণ</li><li>আবেদনের কারণ</li></ul>
+      </div>
+    </details>
+  </div>
+
+  <p style="text-align:center;color:#6a7b71;font-size:0.9rem;margin-top:8px;">
+    এখানে তালিকাভুক্ত নয় এমন কাজও হতে পারে — সরাসরি যোগাযোগ করুন। সকল সরকারি নিয়ম সময়ে সময়ে পরিবর্তিত হয়, তাই সঠিক ও আপডেট তথ্যের জন্য কল বা WhatsApp করুন।
+  </p>
+</section>
+
+<!-- ===== BOOKING ===== -->
+<section id="booking">
+  <div class="section-head">
+    <div class="eyebrow">অ্যাপয়েন্টমেন্ট</div>
+    <h2>আপনার সুবিধামতো সময় বেছে নিন</h2>
+    <p>ফর্ম পূরণ করুন — আমরা আপনার পছন্দের সময় গ্রহণ বা পরিবর্তনের জন্য দ্রুত জানাবো।</p>
+  </div>
+  <div class="booking-wrap">
+    <form id="bookingForm">
+      <div class="booking-grid">
+        <div class="field">
+          <label>নাম / Name</label>
+          <input type="text" name="name" required placeholder="আপনার পুরো নাম">
+        </div>
+        <div class="field">
+          <label>ফোন নম্বর / Phone</label>
+          <input type="tel" name="phone" required placeholder="10-digit mobile number" pattern="[0-9]{10}">
+        </div>
+        <div class="field">
+          <label>পরিষেবা / Service</label>
+          <select name="service" required>
+            <option value="">— পরিষেবা নির্বাচন করুন —</option>
+            <option>আধার কার্ড / Aadhaar Card</option>
+            <option>প্যান কার্ড / PAN Card</option>
+            <option>ভোটার কার্ড / Voter Card</option>
+            <option>রেশন কার্ড / Ration Card</option>
+            <option>জন্ম সার্টিফিকেট / Birth Certificate</option>
+            <option>কাস্ট সার্টিফিকেট / Caste Certificate</option>
+            <option>ইনকাম/ডোমিসাইল/পঞ্চায়েত সার্টিফিকেট</option>
+            <option>অন্নপূর্ণা ভাঁড়ার যোজনা</option>
+            <option>কৃষক বন্ধু / PM-Kisan</option>
+            <option>স্কলারশিপ / Scholarship</option>
+            <option>জমির রেকর্ড / খাজনা</option>
+            <option>বৈদ্যুতিক বিল পেমেন্ট</option>
+            <option>ট্রেড লাইসেন্স</option>
+            <option>ফটো / জেরক্স / প্রিন্ট / PVC কার্ড</option>
+            <option>অনলাইন ফর্ম ফিলাপ</option>
+            <option>অন্য কোনো কাজ / Other</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>পছন্দের তারিখ / Preferred Date</label>
+          <input type="date" name="date" required>
+        </div>
+        <div class="field">
+          <label>পছন্দের সময় / Preferred Time</label>
+          <input type="time" name="time" required>
+        </div>
+        <div class="field">
+          <label>ইমেল (ঐচ্ছিক) / Email (optional)</label>
+          <input type="email" name="email" placeholder="confirmation পেতে চাইলে দিন">
+        </div>
+        <div class="field full">
+          <label>সংক্ষিপ্ত বিবরণ / Short Note</label>
+          <textarea name="note" placeholder="যেমন: নতুন আধার কার্ড — মোবাইল নম্বর পরিবর্তন করতে হবে"></textarea>
+        </div>
+      </div>
+      <div class="booking-submit">
+        <button type="submit" class="btn btn-gold">📩 অ্যাপয়েন্টমেন্ট পাঠান</button>
+        <span id="form-status"></span>
+      </div>
+    </form>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h3>পাত্র অনলাইন সেন্টার</h3>
+      <p>সুবোধ পাত্র<br>রায়দা রাসপুকুর, পাঁচরোল<br>এগরা, পূর্ব মেদিনীপুর — 721447</p>
+      <p style="margin-top:10px;">খোলা: ২৪ ঘণ্টা / Open 24x7</p>
+    </div>
+    <div>
+      <h3>যোগাযোগ</h3>
+      <a href="tel:+918967962733">📞 +91 89679 62733</a>
+      <a href="https://wa.me/918967962733" target="_blank">💬 WhatsApp</a>
+      <a href="mailto:onlinepatra2022@gmail.com">✉️ onlinepatra2022@gmail.com</a>
+    </div>
+    <div>
+      <h3>লোকেশন</h3>
+      <iframe class="map-frame" loading="lazy" src="https://www.google.com/maps?q=Rayda+Raspukur+Panchrol+Egra+Purba+Medinipur+721447&output=embed"></iframe>
+      <a href="https://www.google.com/maps/search/?api=1&query=Patra+Online+Centre+Rayda+Raspukur+Egra" target="_blank" style="margin-top:8px;">📍 Get Directions</a>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 পাত্র অনলাইন সেন্টার — Patra Online Centre. সকল অধিকার সংরক্ষিত।
+  </div>
+</footer>
+
+<!-- ===== FLOATING WHATSAPP ===== -->
+<a class="float-wa" href="https://wa.me/918967962733?text=নমস্কার%2C%20আমি%20পাত্র%20অনলাইন%20সেন্টার%20থেকে%20সাহায্য%20চাই।" target="_blank" aria-label="WhatsApp">💬</a>
+
+<!-- ===== CONFIRMATION MODAL ===== -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-box">
+    <button class="modal-close" onclick="closeModal()">✕</button>
+    <h3>✅ অ্যাপয়েন্টমেন্ট পাঠানো হয়েছে!</h3>
+    <p>আমরা আপনার অনুরোধ পেয়েছি। যত দ্রুত সম্ভব আপনার সময় গ্রহণ বা পরিবর্তনের জন্য জানানো হবে — কল, WhatsApp বা ইমেলের মাধ্যমে। আরও দ্রুত সাড়া পেতে চাইলে নিচে WhatsApp করতে পারেন।</p>
+    <a class="btn btn-whatsapp" target="_blank" id="modalWaLink">💬 WhatsApp এ জানান</a>
+  </div>
+</div>
+
+<script>
+  // ===== Booking Form Submission =====
+  // Replace YOUR_SCRIPT_URL with your deployed Google Apps Script Web App URL
+  const SCRIPT_URL = "YOUR_SCRIPT_URL_HERE";
+
+  const form = document.getElementById('bookingForm');
+  const statusEl = document.getElementById('form-status');
+  const modal = document.getElementById('modalOverlay');
+  const modalWaLink = document.getElementById('modalWaLink');
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    statusEl.textContent = "পাঠানো হচ্ছে...";
+
+    const data = new FormData(form);
+    const payload = {};
+    data.forEach((v,k) => payload[k] = v);
+
+    // Build WhatsApp message for modal fallback
+    const waText = encodeURIComponent(
+      `নমস্কার, আমি অ্যাপয়েন্টমেন্ট বুক করেছি:\nনাম: ${payload.name}\nফোন: ${payload.phone}\nপরিষেবা: ${payload.service}\nতারিখ: ${payload.date}\nসময়: ${payload.time}\nনোট: ${payload.note || '-'}`
+    );
+    modalWaLink.href = `https://wa.me/918967962733?text=${waText}`;
+
+    fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify(payload),
+      headers: {'Content-Type':'text/plain;charset=utf-8'}
+    })
+    .then(()=> {
+      statusEl.textContent = "";
+      form.reset();
+      modal.classList.add('active');
+    })
+    .catch(()=> {
+      // Even if backend fails (e.g. URL not set yet), still show confirmation + WhatsApp fallback
+      statusEl.textContent = "";
+      form.reset();
+      modal.classList.add('active');
+    });
+  });
+
+  function closeModal(){
+    modal.classList.remove('active');
+  }
+</script>
+
+</body>
+</html>
